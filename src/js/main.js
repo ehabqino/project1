@@ -55,7 +55,7 @@
   );
 }());
 
-require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojknockout'],
+require(['ojs/ojbootstrap', 'ojs/ojcontext', 'knockout', 'ojs/ojknockout','appController'],
   function (Bootstrap, Context) {
     Bootstrap.whenDocumentReady().then(
       function () {
