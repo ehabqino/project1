@@ -41,7 +41,7 @@
     <h1>Main Page</h1>
     <div id="sample1" class="">
       <div id="componentContent" class="demo-padding demo-container" >
-        <div id="headerModule">
+        <!-- <div id="headerModule">
           <oj-buttonset-one class="oj-buttonset-width-auto" value="{{currentModule}}">
             <oj-option id="btn1" value="page1">Page 1</oj-option>
             <oj-option id="btn2" value="page2">Page 2</oj-option>
@@ -50,12 +50,20 @@
         <oj-module config="{{moduleConfig}}" class="demo-blue-background">
 
         </oj-module>
-        </div>
-        <div id="footer" style="background-color: black; color: white;"> 
-           all right reserved to qinoit co&copy;2021
-        </div>
+        </div> -->
+       <oj-tab-bar edge="top" data="[[dataProvider]]" selection="[[selection.path]]">
+        <template slot="itemTemplate" data-oj-as="item">
+          <li :id="[[item.data.path]]">
+            <a href="#"><oj-bind-text value="[[item.data.detail.label]]"></oj-bind-text></a>
+          </li>
+        </template>
+
+       </oj-tab-bar>
         
       </div>
+      <div id="footer" style="background-color: black; color: white;"> 
+        all right reserved to qinoit co&copy;2021
+     </div>
     </div>
 
     <script type="text/javascript">
