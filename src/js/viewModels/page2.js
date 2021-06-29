@@ -3,6 +3,6 @@ function(ko,$) {
     function SecondViewModel(){
 
     }
-    return SecongViewModel();
+    return SecondViewModel();
 
 });
