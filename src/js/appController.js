@@ -26,6 +26,8 @@ require(['ojs/ojcore','knockout','ojs/ojbootstrap','jquery','ojs/ojcorerouter','
                 //Router Observable
                 this.selection = new KnockoutRouterAdapter(this.router);
                 
+                //Apply 
+                this.router.sync();
             }//end constructor
 
         }//end class
