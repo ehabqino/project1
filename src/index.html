@@ -52,11 +52,15 @@
         </oj-module>
         </div> -->
        <oj-tab-bar edge="top" data="[[dataProvider]]" selection="[[selection.path]]">
+        
         <template slot="itemTemplate" data-oj-as="item">
-          <li :id="[[item.data.path]]">
-            <a href="#"><oj-bind-text value="[[item.data.detail.label]]"></oj-bind-text></a>
-          </li>
+          <oj-bind-if test="[[item.data.detail]]">
+            <li :id="[[item.data.path]]">
+              <a href="#"><oj-bind-text value="[[item.data.detail.label]]"></oj-bind-text></a>
+            </li>
+        </oj-bind-if>
         </template>
+      
 
        </oj-tab-bar>
         
