@@ -52,7 +52,7 @@
         </oj-module>
         </div> -->
        <div id="mainModule">
-        <oj-tab-bar edge="top" data="[[dataProvider]]" selection="[[selection.path]]">
+        <oj-tab-bar edge="top" data="[[dataProvider]]" selection="{{selection.path}}">
         
         <template slot="itemTemplate" data-oj-as="item">
           <oj-bind-if test="[[item.data.detail]]">
