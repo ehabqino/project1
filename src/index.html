@@ -51,7 +51,8 @@
 
         </oj-module>
         </div> -->
-       <oj-tab-bar edge="top" data="[[dataProvider]]" selection="[[selection.path]]">
+       <div id="mainModule">
+        <oj-tab-bar edge="top" data="[[dataProvider]]" selection="[[selection.path]]">
         
         <template slot="itemTemplate" data-oj-as="item">
           <oj-bind-if test="[[item.data.detail]]">
@@ -60,11 +61,16 @@
             </li>
         </oj-bind-if>
         </template>
-      
-
        </oj-tab-bar>
-        
+       <hr />
+       <div id="pageContent" class="oj-panel oj-bg-info-20">
+        <oj-module config="[[module.koObservableConfig]]" class="oj-flex">
+
+        </oj-module>
       </div>
+      </div>
+      </div>
+     
       <div id="footer" style="background-color: black; color: white;"> 
         all right reserved to qinoit co&copy;2021
      </div>
