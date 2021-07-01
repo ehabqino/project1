@@ -1,7 +1,9 @@
 require(['ojs/ojcore','knockout','ojs/ojbootstrap','jquery','ojs/ojcorerouter','ojs/ojurlparamadapter',
-         'ojs/ojarraydataprovider',
+         'ojs/ojarraydataprovider','ojs/ojmodulerouter-adapter',
+         'ojs/ojknockoutrouteradapter',
          'ojs/ojmodule-element-utils','ojs/ojmodule-element','ojs/ojbutton'],
-    function(oj,ko,bs,$,CoreRouter,UrlParamAdapter,ArrayDataprovider,moduleUtils){
+    function(oj,ko,bs,$,CoreRouter,UrlParamAdapter,ArrayDataprovider,
+        ModuleRouterAdapter,KnockoutRouterAdapter,moduleUtils){
         class SPAModule {
             constructor(){
                 //Define Routes
@@ -20,6 +22,9 @@ require(['ojs/ojcore','knockout','ojs/ojbootstrap','jquery','ojs/ojcorerouter','
                     viewPath : 'views/',
                     viewModelPath : 'viewModels/'
                 });
+
+                //Router Observable
+                this.selection = new KnockoutRouterAdapter(this.router);
                 
             }//end constructor
 
